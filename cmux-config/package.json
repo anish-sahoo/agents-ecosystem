@@ -1,0 +1,13 @@
+{
+  "name": "cmux-config-example",
+  "private": true,
+  "type": "module",
+  "description": "Example opencode plugin: cmux notifications + session status. Other agents should adapt.",
+  "dependencies": {
+    "@opencode-ai/plugin": "1.17.5"
+  },
+  "devDependencies": {
+    "detect-terminal": "2.0.0",
+    "node-notifier": "10.0.1"
+  }
+}

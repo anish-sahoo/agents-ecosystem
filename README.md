@@ -21,7 +21,8 @@ Edit here first, then regenerate.
 ├── tooling.md           # tools and environment I develop with
 ├── agents/              # specialist subagent definitions (neutral frontmatter + prompt)
 ├── skills/              # reusable skills (SKILL.md per skill)
-└── commands/            # workflow command prompts (neutral name + prompt)
+├── commands/            # workflow command prompts (neutral name + prompt)
+└── cmux-config/         # example: cmux notifications (opencode; adapt for other agents)
 ```
 
 ## Conventions

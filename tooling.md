@@ -21,7 +21,8 @@ Tools and environment I develop with. Only entries I actually use are listed.
 
 ## Agent quality-of-life
 - Desktop / multiplexer notifications when a task completes, errors, or needs
-  input (so I can step away during long runs)
+  input (so I can step away during long runs). See `cmux-config/` for an
+  opencode reference implementation (other agents should adapt it).
 
 ## Workflow style
 - Heavy on code review and code quality; light on ceremony.
