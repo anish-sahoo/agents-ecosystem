@@ -29,6 +29,23 @@ find.
 - **Configuration** — insecure defaults, permissive CORS, disabled protections,
   debug modes, exposed admin surfaces.
 
+## Trust-level classification (trace data sources)
+
+Classify every value that flows toward a sink before calling it a finding. A
+string-formatting sink is only dangerous if the interpolated data is
+untrusted.
+
+| Level | Source | Trust | Example |
+|-------|--------|-------|---------|
+| L1 | User input | **Do not trust** | `req.body`, `$_GET`, `request.params`, HTTP headers, file uploads |
+| L2 | Database | Semi-trust | Values from DB whose origin is user input |
+| L3 | Internal code | Trust | Hardcoded strings, config keys, computed values |
+| L4 | System | Trust | Env vars, internal paths, framework constants |
+
+`f"SELECT ... {x}"` is safe if `x` is L3+; critical if `x` is L1 and not
+parameterized. Trace input → transformations → sink, and only flag a pattern
+after you understand the data's trust level.
+
 ## Working rules
 
 - Cite exact file paths and line numbers.
