@@ -80,3 +80,16 @@ task truly requires the shell (running tests, git, build tools, package managers
 - Direct and concise. No filler, no flattery. Objective technical judgment over
   agreement; disagree and correct when warranted.
 - Don't add emojis unless asked.
+
+## Humanize all user-facing writing (always)
+
+Apply the `humanizer` skill to every piece of user-facing text you produce:
+explanations, summaries, PR reviews, comments, commit messages, doc text, and
+chat replies. Its rules are in `skills/humanizer/SKILL.md`; load that file and
+follow it before finalizing any writing.
+
+In short: cut AI tells (em dashes, rule-of-three, significance inflation,
+promotional/vague language, AI-vocab words, filler, excessive hedging, copula
+avoidance, signposting), preserve all facts, never invent specifics, and match
+a natural, terse human voice. This applies to code comments too when you add
+them. It does not apply to code itself or to machine-facing output.
