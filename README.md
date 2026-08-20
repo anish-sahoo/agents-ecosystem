@@ -25,6 +25,7 @@ Edit here first, then regenerate.
 │   ├── ask-questions-if-underspecified/  # clarify requirements before implementing
 │   └── orchestrator/    # when and how to delegate to subagents
 ├── commands/            # workflow command prompts (neutral name + prompt)
+│   └── plz-grill-me.md  # interview until shared understanding (design-tree grilling)
 └── cmux-config/         # example: cmux notifications (opencode; adapt for other agents)
 ```
 
@@ -54,12 +55,17 @@ or rules are credited here.
 
 **Vendored skills**
 - `skills/humanizer/` — [blader/humanizer](https://github.com/blader/humanizer)
-  (MIT), v2.9.1. Always-on humanizer pass for user-facing writing.
+  (MIT), v2.9.1, plus Cursor `unslop` patterns (colon overuse, metaphor jargon,
+  feeling-instead-of-mechanism, dense sentences, adverbs, plain-word swaps).
+  Always-on pass for user-facing writing.
 - `skills/ask-questions-if-underspecified/` —
   [trailofbits/skills](https://github.com/trailofbits/skills)
   (CC-BY-SA-4.0). Clarify requirements before implementing.
 
 **Concepts folded in**
+- `commands/plz-grill-me.md` — design-tree grilling adapted from
+  [mattpocock/skills](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md)
+  (`grilling`). Format block dropped; the agent handles presentation.
 - `agents/reviewer.md` — review categories, confidence calibration, and
   pre-emit verification gate adapted from
   [garrytan/gstack](https://github.com/garrytan/gstack) (MIT), the `/review`

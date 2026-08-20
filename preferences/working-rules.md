@@ -90,9 +90,10 @@ follow it before finalizing any writing.
 
 In short: cut AI tells (em dashes, rule-of-three, significance inflation,
 promotional/vague language, AI-vocab words, filler, excessive hedging, copula
-avoidance, signposting), preserve all facts, never invent specifics, and match
-a natural, terse human voice. This applies to code comments too when you add
-them. It does not apply to code itself or to machine-facing output.
+avoidance, signposting, metaphor jargon, feeling-instead-of-mechanism phrasing),
+preserve all facts, never invent specifics, and match a natural, terse human
+voice. This applies to code comments too when you add them. It does not apply
+to code itself or to machine-facing output.
 
 ## PR descriptions
 

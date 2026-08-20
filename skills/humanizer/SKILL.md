@@ -6,10 +6,11 @@ description: |
   comprehensive "Signs of AI writing" guide. Detects and fixes patterns including:
   inflated symbolism, promotional language, superficial -ing analyses, vague
   attributions, em dash overuse, rule of three, AI vocabulary words, passive
-  voice, negative parallelisms, and filler phrases.
+  voice, negative parallelisms, filler phrases, metaphor jargon, and
+  feeling-instead-of-mechanism phrasing.
 license: MIT
 metadata:
-  version: "2.9.1"
+  version: "2.9.1+unslop"
 ---
 
 # Humanizer: Remove AI Writing Patterns
@@ -44,6 +45,15 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 **Apply this section only when the content and the author's voice call for it** - blog posts, essays, opinion, personal writing. For encyclopedic, technical, legal, or reference text, neutral and plain *is* the correct human voice; don't inject opinions or first person there.
 
 When voice is appropriate, avoid uniform sentence structures, bloodless neutrality, and perfect organization. Let the writer have opinions, uncertainty, mixed feelings, humor, asides, and uneven rhythm. Never add factual claims to create that personality.
+
+Concrete habits when voice is on (from Cursor's `unslop`):
+
+- Have opinions. React to facts instead of listing pros and cons.
+- Vary rhythm. Mix short sentences with longer ones.
+- Acknowledge mixed feelings. "Impressive but also kind of unsettling" beats "impressive."
+- Use "I" when it fits. First person isn't unprofessional.
+- Let some mess in. Perfect structure looks machine-made.
+- Be specific. Not "this is concerning" but a concrete scene or detail.
 
 ## CONTENT PATTERNS
 
@@ -180,7 +190,15 @@ When voice is appropriate, avoid uniform sentence structures, bloodless neutrali
 **After:**
 > The new policy, announced without warning, affects thousands of workers. The changes, long overdue according to critics, will take effect immediately.
 
-Before returning the final rewrite, scan it for `—` and `–`. Any hit means the draft isn't done. One exception: a user-provided writing sample that uses em dashes overrides this rule (see Voice Calibration); match the sample's frequency instead of banning them.
+Before returning the final rewrite, scan it for `—` and `–`. Any hit means the draft isn't done. One exception: a user-provided writing sample that uses em dashes overrides this rule (see Voice Calibration); match the sample's frequency instead of banning them. Don't swap em dashes for parentheses as a habit; that trades one tell for another. If a thought needs separation, end the sentence or use a comma.
+
+### 14b. Colon Overuse
+
+**Problem:** Colons are fine before a list or example. Not as mid-sentence connectors that frame a comparison the reader didn't need.
+**Before:**
+> If you're coming from traditional automation: instead of registering event handlers, you describe conditions.
+**After:**
+> Describing when the scheduler should fire works best as plain English.
 
 ### 15. Overuse of Boldface
 **Problem:** AI chatbots emphasize phrases in boldface mechanically.
@@ -351,6 +369,45 @@ Before returning the final rewrite, scan it for `—` and `–`. Any hit means t
 > Is it worth the price? Honestly? It depends on how often you'll use it.
 **After:**
 > Whether it's worth the price depends on how often you'll use it.
+
+### 34. Abstract Metaphor Nouns
+
+**Words to watch:** substrate, wedge, vector, locus, vantage, nexus, primitive (as noun), harness (as metaphor), surface (as in "API surface" when "API" would do), bedrock, scaffolding (as metaphor), modality, paradigm, gold-plating, ratchet (as metaphor), evacuate (for moving code), endgame, north star, flywheel
+**Problem:** These read as technical but usually have a plainer concrete word.
+**Before:**
+> The new substrate is a wedge into the existing harness, a vector for gold-plating the endgame.
+**After:**
+> The new base is an extra piece in the existing setup, a way to add more than the job needs in the last phase.
+
+Pick the concrete word: "substrate" → "base", "wedge in" → "add", "vector" → "way" or "method", "gold-plating" → "more than the job needs", "ratchet" → the mechanism's real name, "evacuate" → "move out", "endgame" → "the last phase". Keep established technical uses (`API surface` in a docs context that already uses that term, `primitive` as a language primitive).
+
+### 35. Say What It Does, Not How It Feels
+
+**Problem:** Sentences name a feeling instead of a mechanism, number, or instruction. If the sentence could appear unchanged in another project's docs, it says nothing about this one.
+**Before:**
+> The database stays close at hand. SQL you can read. Types that follow your schema.
+**After:**
+> `.toSQL()` returns the exact string sent to the database. A column rename fails the build.
+
+Ask what the sentence tells the reader to do or know, then write that. If you can't restate it as a concrete instruction, fact, or number, cut it.
+
+### 36. Dense Sentences
+
+**Problem:** If the reader has to backtrack to parse a sentence, break it in two or drop clauses. One idea per sentence.
+
+### 37. Cut Adverbs, or Use a Stronger Verb
+
+**Problem:** An adverb propping up a weak verb means the verb is wrong. "runs quickly" becomes "is fast" or the number. "significantly improves" becomes the measured delta.
+
+### 38. Prefer the Plain Word
+
+**Before → After:**
+- "utilize" / "leverage" → "use"
+- "facilitate" → "help"
+- "numerous" → "many"
+- "in the event that" → "if"
+
+The fancier synonym is rarely clearer.
 
 ## DETECTION GUIDANCE
 
