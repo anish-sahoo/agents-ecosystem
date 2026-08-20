@@ -396,6 +396,10 @@ When you see these, lean toward leaving the prose alone — they are evidence of
 
 **Embedded mode.** Another task or agent is using this skill as one step of a larger job (a PR description, a commit message, a doc). Run the loop internally and output only the final text. No draft, no audit bullets, no summary. The caller wants prose, not ceremony.
 
+### PR descriptions
+
+Keep PR descriptions short and human-sounding: flat bullets sized to the change, inline code for filenames, concrete changes and why. Never mention validation, test counts, lint, typecheck, or build status in a PR description. The reader does not care about it. Skip background sections, tables, and exhaustive caveats unless asked for.
+
 ## Process and Output
 
 1. Read the input carefully and identify every instance of the patterns above.

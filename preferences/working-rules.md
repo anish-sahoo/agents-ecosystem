@@ -93,3 +93,16 @@ promotional/vague language, AI-vocab words, filler, excessive hedging, copula
 avoidance, signposting), preserve all facts, never invent specifics, and match
 a natural, terse human voice. This applies to code comments too when you add
 them. It does not apply to code itself or to machine-facing output.
+
+## PR descriptions
+
+Keep PR descriptions short and human-sounding by default. Use a number of flat
+bullets that fits the size of the change, rather than forcing every PR into the
+same length. State the concrete changes and why they were made. Use inline code
+for filenames, commands, model names, and versions. Skip long background
+sections, tables, and exhaustive caveats unless the user asks for them.
+
+## Git
+
+- Prefer merging over rebasing.
+- Never amend a commit unless explicitly asked; make a new commit instead.

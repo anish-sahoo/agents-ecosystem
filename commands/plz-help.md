@@ -29,10 +29,11 @@ What the user said (may be empty): $ARGUMENTS
    | Review work that's already done | **plz-parallel-review** workflow (add `autofix`) |
    | Get it review-clean iteratively | **plz-review-loop** workflow |
    | Security concern / pre-release check | **plz-security-audit** workflow |
-   | Need external + local facts before deciding | **plz-parallel-research** workflow |
-   | Pressure-test a decision or direction | `oracle` |
-   | Pressure-test reasoning/claims in an analysis | `challenger` |
-   | One quick code review | `reviewer` |
+    | Need external + local facts before deciding | **plz-parallel-research** workflow |
+    | Pressure-test a decision or direction | `oracle` |
+    | Pressure-test reasoning/claims in an analysis | `challenger` |
+    | Stress-test a plan, decision, or idea by interviewing | **plz-grill-me** workflow |
+    | One quick code review | `reviewer` |
    | Small, obvious, low-risk change | Just do it directly — no workflow |
    | Address PR comments / CI failures | **plz-fix-pr** workflow |
 
