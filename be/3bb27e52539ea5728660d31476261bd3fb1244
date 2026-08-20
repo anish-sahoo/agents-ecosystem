@@ -1,0 +1,19 @@
+commands/plz-help.md
+  s_54999048756e3c::t_bc396027253587 32-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "be3bb27e52539ea5728660d31476261bd3fb1244",
+  "prompts": {},
+  "sessions": {
+    "s_54999048756e3c": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_fdef23659ffeZZ0DegXkV8faob",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Anish Sahoo <anishsahoo2005@gmail.com>"
+    }
+  }
+}
