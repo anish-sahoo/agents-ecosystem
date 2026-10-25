@@ -27,7 +27,8 @@ Edit here first, then regenerate.
 ├── commands/            # workflow command prompts (neutral name + prompt)
 │   ├── plz-grill-me.md  # interview until shared understanding (design-tree grilling)
 │   └── plz-review-pr.md # one focused read-only PR review
-└── cmux-config/         # cmux notification examples for OpenCode and Pi
+├── cmux-config/         # cmux notification examples for OpenCode and Pi
+└── claude-statusline/   # my Claude Code statusline script + install steps
 ```
 
 ## Conventions
