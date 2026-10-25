@@ -91,6 +91,15 @@ the model unset so it inherits. See that file for the current tier→model choic
 - **Parallelism:** Claude Code spawns subagents via the Task tool, one level
   deep, same single-writer discipline as the neutral source assumes.
 
+## Target: Pi
+
+- **Global config dir:** `~/.pi/agent/`
+- **Skills:** copy `skills/<name>/` to `~/.pi/agent/skills/<name>/`; preserve supporting files.
+- **Commands:** `commands/<name>.md` → `~/.pi/agent/prompts/<name>.md`. Keep the description and prompt body; Pi supports `$ARGUMENTS` and positional arguments. Use `argument-hint` instead of the neutral `args` flag when the command takes arguments.
+- **Agents:** Pi has no built-in subagent resource format. Project each `agents/<name>.md` into a `prompts/agent-<name>.md` command, retain the role body and describe that it runs in the current session. Read-only access and model tiers are guidance only unless an extension enforces them.
+- **Global rules:** `preferences/working-rules.md` → `~/.pi/agent/AGENTS.md`.
+- **Extensions:** use `~/.pi/agent/extensions/` for behavior that needs lifecycle hooks or host integrations. Keep machine-specific paths and credentials out of the neutral source.
+
 ## Target: generic agent CLI
 
 For any other runtime:

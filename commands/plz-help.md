@@ -26,13 +26,14 @@ What the user said (may be empty): $ARGUMENTS
    |---|---|
    | A full feature/change, want guardrails | **plz-ship** workflow |
    | Plan first, no code yet | **plz-plan-feature** workflow |
-   | Review work that's already done | **plz-parallel-review** workflow (add `autofix`) |
+    | Review work that's already done, thoroughly | **plz-parallel-review** workflow (add `autofix`) |
+    | One bounded PR/diff review | **plz-review-pr** workflow |
    | Get it review-clean iteratively | **plz-review-loop** workflow |
    | Security concern / pre-release check | **plz-security-audit** workflow |
     | Need external + local facts before deciding | **plz-parallel-research** workflow |
     | Pressure-test a decision or direction | `oracle` |
     | Pressure-test reasoning/claims in an analysis | `challenger` |
-    | Stress-test a plan, decision, or idea by interviewing | **plz-grill-me** workflow |
+    | Stress-test a plan, decision, or idea by interviewing | `grill` skill or **plz-grill-me** workflow |
     | One quick code review | `reviewer` |
    | Small, obvious, low-risk change | Just do it directly — no workflow |
    | Address PR comments / CI failures | **plz-fix-pr** workflow |

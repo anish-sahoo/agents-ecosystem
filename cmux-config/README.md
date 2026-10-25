@@ -6,15 +6,15 @@ Example of wiring an AI coding agent to **cmux** for:
 - Session status in the cmux UI (busy spinner, needs input, error, idle)
 - Desktop notification fallback when not running inside cmux
 
-## This example is for opencode
+## Runtime adapters
 
 The plugin shape, event names (`session.idle`, `permission.asked`, …), and
-`@opencode-ai/plugin` hooks are **opencode-specific**.
+`@opencode-ai/plugin` hooks in `plugins/` are OpenCode-specific.
 
-Other agent runtimes (Claude Code, Codex, Cursor, custom CLIs, …) should treat
-this as a **reference implementation**: keep the cmux CLI contract and the
-notify philosophy, but re-bind detection and events to your tool's extension
-model.
+`pi/extensions/cmux-notify.ts` adapts the same cmux workflow to Pi lifecycle
+hooks. It marks a session as working, notifies on completion, errors, or when
+Pi opens a blocking UI prompt, and clears status on shutdown. It only runs when cmux
+provides a workspace or allow-all socket environment variable.
 
 ## cmux CLI contract
 
@@ -70,6 +70,13 @@ cmux-config/
         ├── types.ts
         └── with-timeout.ts
 ```
+
+### Install into Pi
+
+Copy `pi/extensions/cmux-notify.ts` into `~/.pi/agent/extensions/`. Pi loads it
+on startup. The adapter uses the cmux binary only when it resolves to a trusted
+absolute path and cmux has set `CMUX_WORKSPACE_ID`, or both
+`CMUX_SOCKET_PATH` and `CMUX_SOCKET_MODE=allowall`.
 
 ### Install into opencode (example)
 

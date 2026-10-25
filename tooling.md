@@ -10,6 +10,7 @@ Tools and environment I develop with. Only entries I actually use are listed.
 - `git` — version control
 - `gh` — GitHub CLI (PRs, checks, run logs)
 - `jq` — JSON processing
+- `wt` — Worktrunk worktree lifecycle and navigation
 
 ## Runtimes & package managers
 - Node.js
@@ -29,3 +30,5 @@ Tools and environment I develop with. Only entries I actually use are listed.
 - Single-writer + read-only advisor/reviewer pattern.
 - Parallel review and parallel security passes for non-trivial changes.
 - Approval checkpoints for full features rather than fully autonomous runs.
+- Use `wt` to create, switch, and remove task worktrees. Keep version-control
+  operations in the repository's configured tool.

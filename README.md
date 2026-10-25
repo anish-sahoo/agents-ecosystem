@@ -25,8 +25,9 @@ Edit here first, then regenerate.
 │   ├── ask-questions-if-underspecified/  # clarify requirements before implementing
 │   └── orchestrator/    # when and how to delegate to subagents
 ├── commands/            # workflow command prompts (neutral name + prompt)
-│   └── plz-grill-me.md  # interview until shared understanding (design-tree grilling)
-└── cmux-config/         # example: cmux notifications (opencode; adapt for other agents)
+│   ├── plz-grill-me.md  # interview until shared understanding (design-tree grilling)
+│   └── plz-review-pr.md # one focused read-only PR review
+└── cmux-config/         # cmux notification examples for OpenCode and Pi
 ```
 
 ## Conventions

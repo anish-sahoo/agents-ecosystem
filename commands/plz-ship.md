@@ -17,6 +17,10 @@ Restate the goal in your own words. If scope, acceptance criteria, constraints,
 or non-goals are unclear, ask focused questions. **Stop and confirm shared
 understanding before planning.**
 
+For consequential product, architecture, or workflow decisions, use the
+`grill` skill before planning. Work through its rounds until the decision tree
+has no unresolved frontier.
+
 ### Gate 1 — Plan (APPROVAL REQUIRED)
 - Map the relevant code (read-only recon subagent if available).
 - Use the `planner` subagent for a concrete plan: ordered steps, named files,

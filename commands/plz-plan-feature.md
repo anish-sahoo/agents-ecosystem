@@ -12,7 +12,9 @@ Goal: $ARGUMENTS
 ## Steps
 
 1. **Clarify.** If scope, acceptance criteria, or non-goals are ambiguous, ask
-   focused questions before planning. Don't guess on consequential choices.
+   focused questions before planning. Don't guess on consequential choices. For
+   consequential product, architecture, or workflow choices, use the `grill`
+   skill and resolve its design-tree frontier before planning.
 
 2. **Explore.** Map the relevant code (entry points, key types/functions, data
    flow, existing patterns, files likely to change) using a read-only recon
